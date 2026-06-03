@@ -12,6 +12,7 @@ body {
     background: #030303;
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 
 .language-screen {
@@ -372,47 +373,245 @@ footer {
     padding: 25px;
 }
 
+/* ========================= */
+/* AJUSTE PARA CELULAR */
+/* ========================= */
+
 @media (max-width: 1000px) {
     .header {
         height: auto;
         grid-template-columns: 1fr;
-        gap: 18px;
-        padding: 16px;
+        gap: 10px;
+        padding: 10px 15px 12px;
         text-align: center;
     }
 
     .logo-area img {
+        width: 110px;
         margin: auto;
     }
 
     nav {
+        display: flex;
         flex-wrap: wrap;
-        gap: 18px;
+        justify-content: center;
+        gap: 8px 16px;
+    }
+
+    nav a {
+        font-size: 12px;
+        letter-spacing: 0.5px;
     }
 
     .header-contact {
         justify-content: center;
+        gap: 12px;
+        font-size: 13px;
+    }
+
+    .header-contact a:last-child {
+        font-size: 22px;
     }
 
     .hero {
-        grid-template-columns: 1fr;
-        padding-top: 220px;
+        min-height: auto;
+        padding: 190px 18px 45px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-overlay {
+        background:
+            linear-gradient(rgba(0,0,0,0.88), rgba(0,0,0,0.95)),
+            radial-gradient(circle at center, rgba(217,154,37,0.22), transparent 45%);
+    }
+
+    .hero-content {
+        max-width: 100%;
+        order: 1;
+    }
+
+    .hero-content span {
+        font-size: 15px;
+        margin-bottom: 18px;
     }
 
     .hero-content h1 {
-        font-size: 38px;
+        font-size: 31px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 25px;
+    }
+
+    .btn-whatsapp {
+        width: 100%;
+        max-width: 330px;
+        padding: 15px 20px;
+        font-size: 14px;
+    }
+
+    .hero-oven {
+        order: 2;
+        width: 100%;
+        margin-top: 35px;
     }
 
     .hero-oven img {
-        height: 460px;
-        margin-top: 40px;
-        border-radius: 20px;
+        height: 300px;
+        width: 100%;
+        border-radius: 18px;
+        object-position: center;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.75);
     }
 
-    .benefits,
+    .benefits {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 35px 22px;
+    }
+
+    .benefits div {
+        padding: 22px;
+        border-left: none;
+        border: 1px solid rgba(217,154,37,0.28);
+        border-radius: 14px;
+        background: rgba(255,255,255,0.03);
+        text-align: center;
+    }
+
+    .benefits h3 {
+        font-size: 17px;
+    }
+
+    .benefits p {
+        font-size: 15px;
+    }
+
     .sobre,
-    .quem-somos,
+    .quem-somos {
+        grid-template-columns: 1fr;
+        padding: 65px 22px;
+        gap: 28px;
+        text-align: center;
+    }
+
+    .quem-somos img {
+        order: 2;
+    }
+
+    .quem-somos .texto {
+        order: 1;
+    }
+
+    .texto h2,
+    .galeria h2,
+    .contato h2 {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .texto p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .sobre img,
+    .quem-somos img {
+        height: 280px;
+        border-radius: 16px;
+    }
+
+    .galeria {
+        padding: 65px 22px;
+    }
+
     .galeria-grid {
         grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .galeria-grid img {
+        height: 280px;
+    }
+
+    .contato {
+        padding: 70px 22px;
+    }
+
+    .contato p {
+        font-size: 18px;
+    }
+
+    .instagram {
+        font-size: 17px;
+        word-break: break-word;
+    }
+
+    .language-box {
+        padding: 28px 18px;
+        width: 92%;
+    }
+
+    .language-logo {
+        width: 190px;
+    }
+
+    .language-box h2 {
+        font-size: 21px;
+    }
+
+    .language-box p {
+        font-size: 12px;
+    }
+
+    .language-buttons {
+        flex-direction: column;
+    }
+
+    .language-buttons button {
+        width: 100%;
+        padding: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-area img {
+        width: 95px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .header-contact {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding-top: 180px;
+    }
+
+    .hero-content h1 {
+        font-size: 27px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .hero-oven img {
+        height: 240px;
+    }
+
+    .sobre img,
+    .quem-somos img,
+    .galeria-grid img {
+        height: 240px;
     }
 }
