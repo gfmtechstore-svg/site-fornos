@@ -160,21 +160,28 @@ nav a:hover,
     align-items: center;
 }
 
-.header-contact a:first-child {
-    color: #fff;
+.top-icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-.header-contact a:last-child {
+.top-icon i,
+.top-instagram i {
     color: #d99a25;
-    font-size: 28px;
+    font-size: 25px;
 }
 
+.top-instagram i {
+    font-size: 30px;
+}
+
+/* BANNER PRINCIPAL */
 .hero {
     min-height: 100vh;
     position: relative;
-    padding: 130px 5% 0;
-    display: grid;
-    grid-template-columns: 0.8fr 1.2fr;
+    padding: 130px 5% 80px;
+    display: flex;
     align-items: center;
     overflow: hidden;
     border-bottom: 1px solid rgba(217, 154, 37, 0.55);
@@ -184,15 +191,15 @@ nav a:hover,
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(90deg, rgba(0,0,0,0.96) 0%, rgba(0,0,0,0.72) 38%, rgba(0,0,0,0.3) 100%),
-        radial-gradient(circle at right, rgba(217, 154, 37, 0.22), transparent 42%);
+        linear-gradient(90deg, rgba(0,0,0,0.94) 0%, rgba(0,0,0,0.72) 45%, rgba(0,0,0,0.45) 100%),
+        radial-gradient(circle at right, rgba(217, 154, 37, 0.28), transparent 42%);
     z-index: 1;
 }
 
 .hero-content {
     position: relative;
     z-index: 3;
-    max-width: 520px;
+    max-width: 650px;
 }
 
 .hero-content span {
@@ -207,51 +214,65 @@ nav a:hover,
 }
 
 .hero-content h1 {
-    font-size: 54px;
-    line-height: 1.18;
+    font-size: 58px;
+    line-height: 1.15;
     text-transform: uppercase;
     margin-bottom: 28px;
     letter-spacing: 1px;
+    color: #fff;
+    text-shadow: 0 0 25px rgba(0,0,0,0.95);
 }
 
 .hero-content p {
-    font-size: 19px;
-    color: #ddd;
+    font-size: 20px;
+    color: #f1f1f1;
     line-height: 1.7;
     margin-bottom: 35px;
+    text-shadow: 0 0 18px rgba(0,0,0,0.9);
 }
 
-.btn-whatsapp {
-    display: inline-block;
-    background: linear-gradient(135deg, #d99a25, #ffbf45);
+/* ESCONDE A IMAGEM DO FORNO NO BANNER */
+.hero-oven {
+    display: none;
+}
+
+.btn-whatsapp,
+.btn-instagram {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #ffb21c, #ffd36a);
     color: #111;
-    padding: 18px 32px;
+    padding: 18px 34px;
     border-radius: 8px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 900;
     text-transform: uppercase;
     transition: 0.3s;
+    box-shadow: 0 0 28px rgba(255, 178, 28, 0.35);
 }
 
-.btn-whatsapp:hover {
+.btn-whatsapp i,
+.btn-instagram i {
+    font-size: 22px;
+    color: #111;
+}
+
+.btn-whatsapp:hover,
+.btn-instagram:hover {
     transform: translateY(-3px);
-    box-shadow: 0 0 28px rgba(217, 154, 37, 0.55);
+    box-shadow: 0 0 38px rgba(255, 178, 28, 0.65);
 }
 
-.hero-oven {
-    position: relative;
-    z-index: 2;
-    align-self: end;
+.btn-instagram {
+    background: transparent;
+    color: #d99a25;
+    border: 1px solid #d99a25;
 }
 
-.hero-oven img {
-    width: 100%;
-    height: 78vh;
-    object-fit: cover;
-    object-position: center;
-    filter: contrast(1.1) brightness(0.82) saturate(1.15);
-    border-radius: 26px 0 0 0;
-    box-shadow: -30px 0 90px rgba(0,0,0,0.8);
+.btn-instagram i {
+    color: #d99a25;
 }
 
 .benefits {
@@ -357,13 +378,34 @@ nav a:hover,
     margin-bottom: 25px;
 }
 
-.instagram {
-    display: block;
-    margin-top: 28px;
-    color: #d99a25;
-    font-size: 20px;
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.whatsapp-float {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    width: 58px;
+    height: 58px;
+    background: #25d366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
-    font-weight: bold;
+    z-index: 900;
+    font-size: 34px;
+    box-shadow: 0 0 30px rgba(37, 211, 102, 0.45);
+    transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.08);
 }
 
 footer {
@@ -373,10 +415,7 @@ footer {
     padding: 25px;
 }
 
-/* ========================= */
-/* AJUSTE PARA CELULAR */
-/* ========================= */
-
+/* MOBILE */
 @media (max-width: 1000px) {
     .header {
         height: auto;
@@ -392,9 +431,7 @@ footer {
     }
 
     nav {
-        display: flex;
         flex-wrap: wrap;
-        justify-content: center;
         gap: 8px 16px;
     }
 
@@ -409,27 +446,26 @@ footer {
         font-size: 13px;
     }
 
-    .header-contact a:last-child {
+    .top-icon i,
+    .top-instagram i {
         font-size: 22px;
     }
 
     .hero {
-        min-height: auto;
-        padding: 190px 18px 45px;
-        display: flex;
-        flex-direction: column;
+        min-height: 100vh;
+        padding: 190px 22px 70px;
         text-align: center;
+        justify-content: center;
     }
 
     .hero-overlay {
         background:
-            linear-gradient(rgba(0,0,0,0.88), rgba(0,0,0,0.95)),
-            radial-gradient(circle at center, rgba(217,154,37,0.22), transparent 45%);
+            linear-gradient(rgba(0,0,0,0.82), rgba(0,0,0,0.92)),
+            radial-gradient(circle at center, rgba(217,154,37,0.28), transparent 45%);
     }
 
     .hero-content {
         max-width: 100%;
-        order: 1;
     }
 
     .hero-content span {
@@ -438,7 +474,7 @@ footer {
     }
 
     .hero-content h1 {
-        font-size: 31px;
+        font-size: 34px;
         line-height: 1.2;
         margin-bottom: 20px;
     }
@@ -449,25 +485,12 @@ footer {
         margin-bottom: 25px;
     }
 
-    .btn-whatsapp {
+    .btn-whatsapp,
+    .btn-instagram {
         width: 100%;
         max-width: 330px;
-        padding: 15px 20px;
+        padding: 16px 20px;
         font-size: 14px;
-    }
-
-    .hero-oven {
-        order: 2;
-        width: 100%;
-        margin-top: 35px;
-    }
-
-    .hero-oven img {
-        height: 300px;
-        width: 100%;
-        border-radius: 18px;
-        object-position: center;
-        box-shadow: 0 20px 60px rgba(0,0,0,0.75);
     }
 
     .benefits {
@@ -485,28 +508,12 @@ footer {
         text-align: center;
     }
 
-    .benefits h3 {
-        font-size: 17px;
-    }
-
-    .benefits p {
-        font-size: 15px;
-    }
-
     .sobre,
     .quem-somos {
         grid-template-columns: 1fr;
         padding: 65px 22px;
         gap: 28px;
         text-align: center;
-    }
-
-    .quem-somos img {
-        order: 2;
-    }
-
-    .quem-somos .texto {
-        order: 1;
     }
 
     .texto h2,
@@ -522,7 +529,8 @@ footer {
     }
 
     .sobre img,
-    .quem-somos img {
+    .quem-somos img,
+    .galeria-grid img {
         height: 280px;
         border-radius: 16px;
     }
@@ -536,10 +544,6 @@ footer {
         gap: 18px;
     }
 
-    .galeria-grid img {
-        height: 280px;
-    }
-
     .contato {
         padding: 70px 22px;
     }
@@ -548,9 +552,9 @@ footer {
         font-size: 18px;
     }
 
-    .instagram {
-        font-size: 17px;
-        word-break: break-word;
+    .contact-buttons {
+        flex-direction: column;
+        align-items: center;
     }
 
     .language-box {
@@ -598,15 +602,11 @@ footer {
     }
 
     .hero-content h1 {
-        font-size: 27px;
+        font-size: 29px;
     }
 
     .hero-content p {
         font-size: 15px;
-    }
-
-    .hero-oven img {
-        height: 240px;
     }
 
     .sobre img,
