@@ -1497,10 +1497,19 @@ video {
         padding: 24px 18px 26px;
     }
 
-    .language-logo {
-        width: 170px;
-        height: 120px;
-    }
+   .language-logo {
+    width: 170px;
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto 18px auto;
+    object-fit: contain;
+    filter: none;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
 
     .language-options {
         grid-template-columns: 1fr;
