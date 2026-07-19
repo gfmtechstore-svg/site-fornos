@@ -47,6 +47,10 @@ function translatePage(language) {
     if (currentLanguageLabel) {
         currentLanguageLabel.textContent = languageNames[language] || "PT";
     }
+
+    document.dispatchEvent(new CustomEvent("campLanguageChanged", {
+        detail: { language }
+    }));
 }
 
 function closeLanguageScreen() {

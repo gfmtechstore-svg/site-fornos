@@ -1,0 +1,19 @@
+CAMP FORNOS - FIREBASE E PAINEL ADMINISTRATIVO
+
+Arquivos novos:
+- firebase/firebase.js
+- firebase/catalogo.js
+- admin/index.html
+- admin/admin.css
+- admin/admin.js
+
+Painel online:
+https://www.campfornos.com.br/admin/
+
+Antes de testar o login, adicione em Firebase Authentication > Configurações > Domínios autorizados:
+- campfornos.com.br
+- www.campfornos.com.br
+- localhost (para Live Server, se necessário)
+- 127.0.0.1 (para Live Server, se necessário)
+
+Depois de entrar no painel, clique uma única vez em “Cadastrar modelos iniciais”.

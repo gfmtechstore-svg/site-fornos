@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Camp Fornos do Brasil | Venda e Aluguel de Fornos Profissionais</title>
+    <meta name="description" content="Camp Fornos do Brasil. Venda e aluguel de fornos profissionais para pizzas napolitanas, romanas e brasileiras. Tecnologia, eficiência e tradição desde 2003.">
+    <meta name="theme-color" content="#080706">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://www.campfornos.com.br/">
+    <link rel="icon" type="image/png" href="img/logo.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Camp Fornos do Brasil">
+    <meta property="og:description" content="Fornos profissionais para pizzarias de alto desempenho. Venda e aluguel em Campinas - SP.">
+    <meta property="og:url" content="https://www.campfornos.com.br/">
+    <meta property="og:image" content="https://www.campfornos.com.br/img/forno2.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css/style.css">
+</head>
+<body>
+    <noscript>
+        <div class="noscript-message">Ative o JavaScript para visualizar todos os recursos do site.</div>
+    </noscript>
+
+    <div class="language-screen" id="languageScreen" role="dialog" aria-modal="true" aria-labelledby="languageTitle">
+        <video class="language-video" autoplay muted loop playsinline preload="metadata">
+            <source src="img/fogo.mp4" type="video/mp4">
+        </video>
+        <div class="language-shade"></div>
+        <div class="embers" id="languageEmbers" aria-hidden="true"></div>
+
+        <div class="language-card">
+            <img class="language-logo" src="img/logo.png" alt="Camp Fornos do Brasil">
+            <span class="language-eyebrow">Camp Fornos do Brasil</span>
+            <h1 id="languageTitle" data-pt="Escolha seu idioma" data-en="Choose your language" data-es="Elija su idioma">Escolha seu idioma</h1>
+            <p data-pt="Selecione uma opção para acessar o site." data-en="Select an option to enter the website." data-es="Seleccione una opción para acceder al sitio.">Selecione uma opção para acessar o site.</p>
+
+            <div class="language-options">
+                <button type="button" class="language-option" onclick="setLanguage('pt')">
+                    <span class="language-flag">🇧🇷</span>
+                    <span>Português</span>
+                </button>
+                <button type="button" class="language-option" onclick="setLanguage('en')">
+                    <span class="language-flag">🇺🇸</span>
+                    <span>English</span>
+                </button>
+                <button type="button" class="language-option" onclick="setLanguage('es')">
+                    <span class="language-flag">🇪🇸</span>
+                    <span>Español</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <header class="site-header" id="siteHeader">
+        <a class="brand" href="#inicio" aria-label="Camp Fornos do Brasil - Início">
+            <img src="img/logo.png" alt="Camp Fornos do Brasil">
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNavigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="main-navigation" id="mainNavigation" aria-label="Navegação principal">
+            <a href="#inicio" data-pt="Início" data-en="Home" data-es="Inicio">Início</a>
+            <a href="#fornos" data-pt="Fornos" data-en="Ovens" data-es="Hornos">Fornos</a>
+            <a href="#empresa" data-pt="A empresa" data-en="Company" data-es="La empresa">A empresa</a>
+            <a href="#aluguel" data-pt="Venda e aluguel" data-en="Sales and rental" data-es="Venta y alquiler">Venda e aluguel</a>
+            <a href="#contato" data-pt="Contato" data-en="Contact" data-es="Contacto">Contato</a>
+        </nav>
+
+        <div class="header-actions">
+            <button class="language-switch" id="languageSwitch" type="button" aria-label="Trocar idioma">
+                <i class="fa-solid fa-globe"></i>
+                <span id="currentLanguageLabel">PT</span>
+            </button>
+
+            <a class="header-social" href="https://www.instagram.com/camp_fornos_do_brasil/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Camp Fornos">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a class="header-whatsapp" href="https://wa.me/5519989466089" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span data-pt="Fale conosco" data-en="Talk to us" data-es="Hable con nosotros">Fale conosco</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <video class="hero-video" autoplay muted loop playsinline preload="metadata">
+                <source src="img/fogo.mp4" type="video/mp4">
+            </video>
+            <div class="hero-shade"></div>
+            <div class="embers" id="heroEmbers" aria-hidden="true"></div>
+
+            <div class="hero-content reveal is-visible">
+                <span class="section-kicker" data-pt="Excelência desde 2003" data-en="Excellence since 2003" data-es="Excelencia desde 2003">Excelência desde 2003</span>
+                <h1 data-pt="A chama que transforma a sua pizzaria" data-en="The flame that transforms your pizzeria" data-es="La llama que transforma su pizzería">A chama que transforma a sua pizzaria</h1>
+                <p data-pt="Fornos profissionais com alto desempenho, economia e acabamento personalizado para pizzas napolitanas, romanas e brasileiras." data-en="Professional ovens with high performance, efficiency and custom finishes for Neapolitan, Roman and Brazilian pizzas." data-es="Hornos profesionales de alto rendimiento, eficiencia y acabados personalizados para pizzas napolitanas, romanas y brasileñas.">Fornos profissionais com alto desempenho, economia e acabamento personalizado para pizzas napolitanas, romanas e brasileiras.</p>
+
+                <div class="hero-buttons">
+                    <a class="button button-primary" href="https://wa.me/5519989466089?text=Olá%2C%20quero%20solicitar%20um%20orçamento%20da%20Camp%20Fornos." target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span data-pt="Solicitar orçamento" data-en="Request a quote" data-es="Solicitar presupuesto">Solicitar orçamento</span>
+                    </a>
+                    <a class="button button-secondary" href="#fornos">
+                        <span data-pt="Conhecer os fornos" data-en="Explore the ovens" data-es="Conocer los hornos">Conhecer os fornos</span>
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </a>
+                </div>
+
+                <div class="hero-highlights" aria-label="Destaques da Camp Fornos">
+                    <div>
+                        <strong>2003</strong>
+                        <span data-pt="Início da nossa história" data-en="The start of our story" data-es="El inicio de nuestra historia">Início da nossa história</span>
+                    </div>
+                    <div>
+                        <strong>470°C</strong>
+                        <span data-pt="Alta temperatura de trabalho" data-en="High working temperature" data-es="Alta temperatura de trabajo">Alta temperatura de trabalho</span>
+                    </div>
+                    <div>
+                        <strong>3</strong>
+                        <span data-pt="Estilos de pizza" data-en="Pizza styles" data-es="Estilos de pizza">Estilos de pizza</span>
+                    </div>
+                </div>
+            </div>
+
+            <a class="scroll-indicator" href="#fornos" aria-label="Ir para os fornos">
+                <span data-pt="Descubra" data-en="Discover" data-es="Descubra">Descubra</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+        </section>
+
+        <section class="feature-strip" aria-label="Diferenciais">
+            <article class="reveal">
+                <i class="fa-solid fa-fire-flame-curved"></i>
+                <div>
+                    <h2 data-pt="Alta performance" data-en="High performance" data-es="Alto rendimiento">Alta performance</h2>
+                    <p data-pt="Calor uniforme para resultados consistentes." data-en="Even heat for consistent results." data-es="Calor uniforme para resultados consistentes.">Calor uniforme para resultados consistentes.</p>
+                </div>
+            </article>
+            <article class="reveal">
+                <i class="fa-solid fa-shield-halved"></i>
+                <div>
+                    <h2 data-pt="Construção robusta" data-en="Robust construction" data-es="Construcción robusta">Construção robusta</h2>
+                    <p data-pt="Materiais selecionados para uso profissional." data-en="Selected materials for professional use." data-es="Materiales seleccionados para uso profesional.">Materiais selecionados para uso profissional.</p>
+                </div>
+            </article>
+            <article class="reveal">
+                <i class="fa-solid fa-leaf"></i>
+                <div>
+                    <h2 data-pt="Eficiência" data-en="Efficiency" data-es="Eficiencia">Eficiência</h2>
+                    <p data-pt="Produção eficiente com melhor aproveitamento de energia." data-en="Efficient production with better energy use." data-es="Producción eficiente con mejor aprovechamiento de energía.">Produção eficiente com melhor aproveitamento de energia.</p>
+                </div>
+            </article>
+            <article class="reveal">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <div>
+                    <h2 data-pt="Personalização" data-en="Customization" data-es="Personalización">Personalização</h2>
+                    <p data-pt="Acabamentos que valorizam a identidade do seu negócio." data-en="Finishes that enhance your business identity." data-es="Acabados que realzan la identidad de su negocio.">Acabamentos que valorizam a identidade do seu negócio.</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="section ovens-section" id="fornos">
+            <div class="section-heading reveal">
+                <span class="section-kicker" data-pt="Design, potência e personalidade" data-en="Design, power and personality" data-es="Diseño, potencia y personalidad">Design, potência e personalidade</span>
+                <h2 data-pt="Fornos criados para fazer a diferença" data-en="Ovens made to make a difference" data-es="Hornos creados para marcar la diferencia">Fornos criados para fazer a diferença</h2>
+                <p data-pt="Cada projeto combina estrutura profissional, refratários de alta temperatura e opções de acabamento para transformar o forno em parte da experiência da pizzaria." data-en="Each project combines professional construction, high-temperature refractory materials and finish options that make the oven part of the pizzeria experience." data-es="Cada proyecto combina estructura profesional, refractarios de alta temperatura y opciones de acabado que convierten el horno en parte de la experiencia de la pizzería.">Cada projeto combina estrutura profissional, refratários de alta temperatura e opções de acabamento para transformar o forno em parte da experiência da pizzaria.</p>
+            </div>
+
+            <div class="oven-gallery">
+                <article class="oven-card reveal">
+                    <button class="oven-image-button" type="button" data-lightbox-src="img/forno1.jpeg" data-lightbox-alt="Forno Camp Fornos com acabamento inspirado nas cores da Itália">
+                        <picture>
+                            <source srcset="img/forno1.webp" type="image/webp">
+                            <img src="img/forno1.jpeg" alt="Forno Camp Fornos com acabamento inspirado nas cores da Itália" loading="lazy">
+                        </picture>
+                        <span class="image-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                    </button>
+                    <div class="oven-card-content">
+                        <span class="oven-number">01</span>
+                        <h3 data-pt="Acabamentos personalizados" data-en="Custom finishes" data-es="Acabados personalizados">Acabamentos personalizados</h3>
+                        <p data-pt="Cores e revestimentos pensados para integrar o forno ao conceito visual da sua pizzaria." data-en="Colors and finishes designed to integrate the oven into your pizzeria's visual concept." data-es="Colores y revestimientos pensados para integrar el horno al concepto visual de su pizzería.">Cores e revestimentos pensados para integrar o forno ao conceito visual da sua pizzaria.</p>
+                    </div>
+                </article>
+
+                <article class="oven-card oven-card-featured reveal">
+                    <button class="oven-image-button" type="button" data-lightbox-src="img/forno2.png" data-lightbox-alt="Forno Camp Fornos vermelho com chama acesa">
+                        <picture>
+                            <source srcset="img/forno2.webp" type="image/webp">
+                            <img src="img/forno2.png" alt="Forno Camp Fornos vermelho com chama acesa" loading="lazy">
+                        </picture>
+                        <span class="image-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                    </button>
+                    <div class="oven-card-content">
+                        <span class="oven-number">02</span>
+                        <h3 data-pt="Performance profissional" data-en="Professional performance" data-es="Rendimiento profesional">Performance profissional</h3>
+                        <p data-pt="Temperatura, estabilidade e presença visual para operações que exigem alto desempenho." data-en="Temperature, stability and visual presence for operations that demand high performance." data-es="Temperatura, estabilidad y presencia visual para operaciones que exigen alto rendimiento.">Temperatura, estabilidade e presença visual para operações que exigem alto desempenho.</p>
+                    </div>
+                </article>
+
+                <article class="oven-card reveal">
+                    <button class="oven-image-button" type="button" data-lightbox-src="img/forno3.png" data-lightbox-alt="Forno Camp Fornos vermelho com porta aberta">
+                        <picture>
+                            <source srcset="img/forno3.webp" type="image/webp">
+                            <img src="img/forno3.png" alt="Forno Camp Fornos vermelho com porta aberta" loading="lazy">
+                        </picture>
+                        <span class="image-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                    </button>
+                    <div class="oven-card-content">
+                        <span class="oven-number">03</span>
+                        <h3 data-pt="Estrutura completa" data-en="Complete structure" data-es="Estructura completa">Estrutura completa</h3>
+                        <p data-pt="Projeto funcional com componentes preparados para a rotina intensa de uma operação profissional." data-en="Functional design with components prepared for the intense routine of a professional operation." data-es="Diseño funcional con componentes preparados para la rutina intensa de una operación profesional.">Projeto funcional com componentes preparados para a rotina intensa de uma operação profissional.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section company-section" id="empresa">
+            <div class="company-glow" aria-hidden="true"></div>
+            <div class="company-copy reveal">
+                <span class="section-kicker" data-pt="Quem somos" data-en="Who we are" data-es="Quiénes somos">Quem somos</span>
+                <h2 data-pt="Uma história acesa pela inovação" data-en="A story ignited by innovation" data-es="Una historia encendida por la innovación">Uma história acesa pela inovação</h2>
+                <p data-pt="Desde 2003, a Camp Fornos desenvolve soluções para pizzarias que buscam produtividade, economia e uma experiência superior no preparo das pizzas." data-en="Since 2003, Camp Fornos has developed solutions for pizzerias seeking productivity, efficiency and a superior pizza-making experience." data-es="Desde 2003, Camp Fornos desarrolla soluciones para pizzerías que buscan productividad, eficiencia y una experiencia superior en la preparación de pizzas.">Desde 2003, a Camp Fornos desenvolve soluções para pizzarias que buscam produtividade, economia e uma experiência superior no preparo das pizzas.</p>
+                <p data-pt="Nossa missão é unir conhecimento técnico, materiais de qualidade e atendimento próximo para entregar um forno preparado para o futuro do seu negócio." data-en="Our mission is to combine technical knowledge, quality materials and close service to deliver an oven prepared for the future of your business." data-es="Nuestra misión es unir conocimiento técnico, materiales de calidad y atención cercana para entregar un horno preparado para el futuro de su negocio.">Nossa missão é unir conhecimento técnico, materiais de qualidade e atendimento próximo para entregar um forno preparado para o futuro do seu negócio.</p>
+                <blockquote data-pt="Camp Fornos, a chama do sucesso." data-en="Camp Fornos, the flame of success." data-es="Camp Fornos, la llama del éxito.">Camp Fornos, a chama do sucesso.</blockquote>
+            </div>
+
+            <div class="timeline reveal" aria-label="Linha do tempo da Camp Fornos">
+                <div class="timeline-item">
+                    <span>2003</span>
+                    <div>
+                        <h3 data-pt="O começo" data-en="The beginning" data-es="El comienzo">O começo</h3>
+                        <p data-pt="Nasce a experiência da Camp Fornos voltada ao mercado de pizzarias." data-en="Camp Fornos begins its journey focused on the pizzeria market." data-es="Camp Fornos inicia su trayectoria enfocada en el mercado de pizzerías.">Nasce a experiência da Camp Fornos voltada ao mercado de pizzarias.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span>380–470°C</span>
+                    <div>
+                        <h3 data-pt="Faixa de trabalho" data-en="Working range" data-es="Rango de trabajo">Faixa de trabalho</h3>
+                        <p data-pt="Temperaturas de lastro para bases crocantes, uniformes e bem finalizadas." data-en="Deck temperatures for crispy, even and well-finished bases." data-es="Temperaturas de solera para bases crujientes, uniformes y bien terminadas.">Temperaturas de lastro para bases crocantes, uniformes e bem finalizadas.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span data-pt="Hoje" data-en="Today" data-es="Hoy">Hoje</span>
+                    <div>
+                        <h3 data-pt="Evolução contínua" data-en="Continuous evolution" data-es="Evolución continua">Evolução contínua</h3>
+                        <p data-pt="Venda, aluguel e projetos personalizados para diferentes operações." data-en="Sales, rental and customized projects for different operations." data-es="Venta, alquiler y proyectos personalizados para diferentes operaciones.">Venda, aluguel e projetos personalizados para diferentes operações.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section temperature-section">
+            <div class="temperature-panel reveal">
+                <div class="temperature-copy">
+                    <span class="section-kicker" data-pt="O lastro faz a diferença" data-en="The deck makes the difference" data-es="La solera marca la diferencia">O lastro faz a diferença</span>
+                    <h2 data-pt="Controle de temperatura para cada estilo de pizza" data-en="Temperature control for every pizza style" data-es="Control de temperatura para cada estilo de pizza">Controle de temperatura para cada estilo de pizza</h2>
+                    <p data-pt="Os refratários da Camp Fornos suportam temperaturas de até 470°C e ajudam a criar uma cocção uniforme, uma base crocante e um acabamento de alto padrão." data-en="Camp Fornos refractory materials withstand temperatures of up to 470°C and help create even baking, a crispy base and a high-standard finish." data-es="Los refractarios Camp Fornos soportan temperaturas de hasta 470°C y ayudan a crear una cocción uniforme, una base crujiente y un acabado de alto nivel.">Os refratários da Camp Fornos suportam temperaturas de até 470°C e ajudam a criar uma cocção uniforme, uma base crocante e um acabamento de alto padrão.</p>
+                </div>
+
+                <div class="temperature-gauge" aria-label="Faixa de temperatura entre 380 e 470 graus Celsius">
+                    <div class="gauge-ring">
+                        <div class="gauge-center">
+                            <strong>470°C</strong>
+                            <span data-pt="temperatura máxima" data-en="maximum temperature" data-es="temperatura máxima">temperatura máxima</span>
+                        </div>
+                    </div>
+                    <div class="pizza-types">
+                        <span data-pt="Napolitana" data-en="Neapolitan" data-es="Napolitana">Napolitana</span>
+                        <span data-pt="Romana" data-en="Roman" data-es="Romana">Romana</span>
+                        <span data-pt="Brasileira" data-en="Brazilian" data-es="Brasileña">Brasileira</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section business-section" id="aluguel">
+            <div class="section-heading reveal">
+                <span class="section-kicker" data-pt="Soluções para cada momento" data-en="Solutions for every stage" data-es="Soluciones para cada momento">Soluções para cada momento</span>
+                <h2 data-pt="Compre ou alugue o forno ideal" data-en="Buy or rent the ideal oven" data-es="Compre o alquile el horno ideal">Compre ou alugue o forno ideal</h2>
+                <p data-pt="Nossa equipe ajuda a identificar a solução mais adequada ao espaço, ao volume de produção e ao momento do seu negócio." data-en="Our team helps identify the solution best suited to your space, production volume and business stage." data-es="Nuestro equipo ayuda a identificar la solución más adecuada para su espacio, volumen de producción y etapa del negocio.">Nossa equipe ajuda a identificar a solução mais adequada ao espaço, ao volume de produção e ao momento do seu negócio.</p>
+            </div>
+
+            <div class="catalog-intro reveal">
+                <div>
+                    <span class="catalog-pill"><i class="fa-regular fa-clock"></i><span data-pt="Aluguel por 24 horas" data-en="24-hour rental" data-es="Alquiler por 24 horas">Aluguel por 24 horas</span></span>
+                    <h3 data-pt="Modelos e valores de aluguel" data-en="Rental models and prices" data-es="Modelos y precios de alquiler">Modelos e valores de aluguel</h3>
+                    <p data-pt="Escolha o modelo e fale com nossa equipe para confirmar a disponibilidade, logística e condições do evento." data-en="Choose a model and contact our team to confirm availability, logistics and event conditions." data-es="Elija el modelo y hable con nuestro equipo para confirmar disponibilidad, logística y condiciones del evento.">Escolha o modelo e fale com nossa equipe para confirmar a disponibilidade, logística e condições do evento.</p>
+                </div>
+                <span class="catalog-source" id="catalogSource" hidden></span>
+            </div>
+
+            <div class="rental-catalog" id="rentalCatalog" aria-live="polite">
+                <article class="rental-card rental-card-loading">
+                    <div class="catalog-loading-line"></div>
+                    <div class="catalog-loading-line short"></div>
+                    <div class="catalog-loading-block"></div>
+                </article>
+            </div>
+
+            <div class="business-cards">
+                <article class="business-card reveal">
+                    <div class="business-icon"><i class="fa-solid fa-store"></i></div>
+                    <span class="business-label" data-pt="Aquisição" data-en="Purchase" data-es="Compra">Aquisição</span>
+                    <h3 data-pt="Venda de fornos" data-en="Oven sales" data-es="Venta de hornos">Venda de fornos</h3>
+                    <p data-pt="Escolha acabamento, configuração e acessórios para criar uma solução alinhada à identidade da sua pizzaria." data-en="Choose finishes, configuration and accessories to create a solution aligned with your pizzeria's identity." data-es="Elija acabados, configuración y accesorios para crear una solución alineada con la identidad de su pizzería.">Escolha acabamento, configuração e acessórios para criar uma solução alinhada à identidade da sua pizzaria.</p>
+                    <span class="business-price" data-pt="Valores sob consulta" data-en="Prices on request" data-es="Precios bajo consulta">Valores sob consulta</span>
+                    <a class="button button-secondary" href="https://wa.me/5519989466089?text=Olá%2C%20quero%20informações%20sobre%20a%20compra%20de%20um%20forno." target="_blank" rel="noopener noreferrer">
+                        <span data-pt="Falar sobre compra" data-en="Talk about purchasing" data-es="Hablar sobre compra">Falar sobre compra</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <article class="business-card business-card-highlight reveal">
+                    <div class="business-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                    <span class="business-label" data-pt="Flexibilidade" data-en="Flexibility" data-es="Flexibilidad">Flexibilidade</span>
+                    <h3 data-pt="Aluguel de fornos" data-en="Oven rental" data-es="Alquiler de hornos">Aluguel de fornos</h3>
+                    <p data-pt="Uma alternativa para eventos, testes de operação, expansão temporária ou início de atividade com menor investimento inicial." data-en="An alternative for events, operation tests, temporary expansion or starting activities with a lower initial investment." data-es="Una alternativa para eventos, pruebas de operación, expansión temporal o inicio de actividad con menor inversión inicial.">Uma alternativa para eventos, testes de operação, expansão temporária ou início de atividade com menor investimento inicial.</p>
+                    <span class="business-price" data-pt="A partir de R$ 280,00 por 24 horas" data-en="From R$ 280.00 per 24 hours" data-es="Desde R$ 280,00 por 24 horas">A partir de R$ 280,00 por 24 horas</span>
+                    <a class="button button-primary" href="https://wa.me/5519989466089?text=Olá%2C%20quero%20informações%20sobre%20aluguel%20de%20fornos." target="_blank" rel="noopener noreferrer">
+                        <span data-pt="Consultar aluguel" data-en="Ask about rental" data-es="Consultar alquiler">Consultar aluguel</span>
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contato">
+            <div class="contact-intro reveal">
+                <span class="section-kicker" data-pt="Vamos conversar" data-en="Let's talk" data-es="Hablemos">Vamos conversar</span>
+                <h2 data-pt="Seu próximo forno começa com uma boa conversa" data-en="Your next oven starts with a good conversation" data-es="Su próximo horno comienza con una buena conversación">Seu próximo forno começa com uma boa conversa</h2>
+                <p data-pt="Conte um pouco sobre sua pizzaria. Ao enviar, abriremos o WhatsApp com a mensagem pronta para nossa equipe." data-en="Tell us a little about your pizzeria. When you submit, WhatsApp will open with a ready-made message for our team." data-es="Cuéntenos un poco sobre su pizzería. Al enviar, WhatsApp se abrirá con un mensaje listo para nuestro equipo.">Conte um pouco sobre sua pizzaria. Ao enviar, abriremos o WhatsApp com a mensagem pronta para nossa equipe.</p>
+
+                <div class="contact-details">
+                    <a href="https://wa.me/5519989466089" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span>(19) 98946-6089</span>
+                    </a>
+                    <a href="https://www.instagram.com/camp_fornos_do_brasil/" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span>@camp_fornos_do_brasil</span>
+                    </a>
+                    <div>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Campinas - SP</span>
+                    </div>
+                </div>
+            </div>
+
+            <form class="quote-form reveal" id="quoteForm">
+                <div class="form-row">
+                    <label>
+                        <span data-pt="Nome" data-en="Name" data-es="Nombre">Nome</span>
+                        <input id="quoteName" name="name" type="text" required autocomplete="name" data-placeholder-pt="Seu nome" data-placeholder-en="Your name" data-placeholder-es="Su nombre" placeholder="Seu nome">
+                    </label>
+                    <label>
+                        <span data-pt="Cidade" data-en="City" data-es="Ciudad">Cidade</span>
+                        <input id="quoteCity" name="city" type="text" required autocomplete="address-level2" data-placeholder-pt="Sua cidade" data-placeholder-en="Your city" data-placeholder-es="Su ciudad" placeholder="Sua cidade">
+                    </label>
+                </div>
+
+                <label>
+                    <span data-pt="Interesse" data-en="Interest" data-es="Interés">Interesse</span>
+                    <select id="quoteInterest" name="interest" required>
+                        <option value="" data-pt="Selecione" data-en="Select" data-es="Seleccione">Selecione</option>
+                        <option value="venda" data-pt="Comprar um forno" data-en="Buy an oven" data-es="Comprar un horno">Comprar um forno</option>
+                        <option value="aluguel" data-pt="Alugar um forno" data-en="Rent an oven" data-es="Alquilar un horno">Alugar um forno</option>
+                        <option value="duvida" data-pt="Tirar uma dúvida" data-en="Ask a question" data-es="Hacer una consulta">Tirar uma dúvida</option>
+                    </select>
+                </label>
+
+                <label>
+                    <span data-pt="Mensagem" data-en="Message" data-es="Mensaje">Mensagem</span>
+                    <textarea id="quoteMessage" name="message" rows="5" data-placeholder-pt="Conte sobre o espaço, produção ou evento..." data-placeholder-en="Tell us about your space, production or event..." data-placeholder-es="Cuéntenos sobre su espacio, producción o evento..." placeholder="Conte sobre o espaço, produção ou evento..."></textarea>
+                </label>
+
+                <button class="button button-primary form-submit" type="submit">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span data-pt="Enviar pelo WhatsApp" data-en="Send via WhatsApp" data-es="Enviar por WhatsApp">Enviar pelo WhatsApp</span>
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-main">
+            <a class="footer-brand" href="#inicio">
+                <img src="img/logo.png" alt="Camp Fornos do Brasil">
+            </a>
+
+            <div class="footer-copy">
+                <h2 data-pt="Camp Fornos do Brasil" data-en="Camp Fornos do Brasil" data-es="Camp Fornos do Brasil">Camp Fornos do Brasil</h2>
+                <p data-pt="Fornos profissionais, venda, aluguel e projetos personalizados para pizzarias." data-en="Professional ovens, sales, rental and customized projects for pizzerias." data-es="Hornos profesionales, venta, alquiler y proyectos personalizados para pizzerías.">Fornos profissionais, venda, aluguel e projetos personalizados para pizzarias.</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="#fornos" data-pt="Fornos" data-en="Ovens" data-es="Hornos">Fornos</a>
+                <a href="#empresa" data-pt="A empresa" data-en="Company" data-es="La empresa">A empresa</a>
+                <a href="#aluguel" data-pt="Venda e aluguel" data-en="Sales and rental" data-es="Venta y alquiler">Venda e aluguel</a>
+                <a href="#contato" data-pt="Contato" data-en="Contact" data-es="Contacto">Contato</a>
+                <a class="footer-admin-link" href="admin/">
+                    <i class="fa-solid fa-lock"></i>
+                    <span data-pt="Área administrativa" data-en="Admin area" data-es="Área administrativa">Área administrativa</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© <span id="currentYear">2026</span> CAMP FORNOS DO BRASIL — <span data-pt="Todos os direitos reservados." data-en="All rights reserved." data-es="Todos los derechos reservados.">Todos os direitos reservados.</span></p>
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/camp_fornos_do_brasil/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/5519989466089" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <a class="whatsapp-float" href="https://wa.me/5519989466089?text=Olá%2C%20vim%20pelo%20site%20da%20Camp%20Fornos." target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span data-pt="Fale conosco" data-en="Talk to us" data-es="Hable con nosotros">Fale conosco</span>
+    </a>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualização ampliada da imagem" hidden>
+        <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Fechar imagem"><i class="fa-solid fa-xmark"></i></button>
+        <img id="lightboxImage" src="" alt="">
+    </div>
+
+    <script src="script.js/script.js"></script>
+    <script type="module" src="firebase/catalogo.js"></script>
+</body>
+</html>

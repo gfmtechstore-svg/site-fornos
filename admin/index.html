@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Painel Administrativo | Camp Fornos</title>
+    <link rel="icon" type="image/png" href="../img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="admin-background" aria-hidden="true"></div>
+
+    <main class="admin-shell">
+        <section class="login-panel" id="loginPanel">
+            <div class="login-card">
+                <a class="admin-logo" href="../index.html" aria-label="Voltar ao site">
+                    <img src="../img/logo.png" alt="Camp Fornos do Brasil">
+                </a>
+                <span class="admin-kicker">Área restrita</span>
+                <h1>Painel administrativo</h1>
+                <p>Entre com o e-mail e a senha cadastrados no Firebase.</p>
+
+                <form id="loginForm" class="admin-form">
+                    <label>
+                        <span>E-mail</span>
+                        <div class="input-with-icon">
+                            <i class="fa-regular fa-envelope"></i>
+                            <input id="loginEmail" type="email" autocomplete="username" required placeholder="seuemail@exemplo.com">
+                        </div>
+                    </label>
+                    <label>
+                        <span>Senha</span>
+                        <div class="input-with-icon">
+                            <i class="fa-solid fa-lock"></i>
+                            <input id="loginPassword" type="password" autocomplete="current-password" required placeholder="Sua senha">
+                            <button class="password-toggle" id="passwordToggle" type="button" aria-label="Mostrar senha"><i class="fa-regular fa-eye"></i></button>
+                        </div>
+                    </label>
+
+                    <button class="admin-button admin-button-primary" id="loginButton" type="submit">
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                        Entrar no painel
+                    </button>
+                    <button class="link-button" id="resetPasswordButton" type="button">Esqueci minha senha</button>
+                </form>
+
+                <div class="status-message" id="loginStatus" hidden></div>
+                <a class="back-site" href="../index.html"><i class="fa-solid fa-arrow-left"></i> Voltar ao site</a>
+            </div>
+        </section>
+
+        <section class="dashboard" id="dashboard" hidden>
+            <header class="dashboard-header">
+                <a class="dashboard-brand" href="../index.html">
+                    <img src="../img/logo.png" alt="Camp Fornos">
+                    <div>
+                        <strong>Painel Camp Fornos</strong>
+                        <span>Preços e descrições</span>
+                    </div>
+                </a>
+
+                <div class="dashboard-user">
+                    <div>
+                        <span>Administrador</span>
+                        <strong id="adminEmail">—</strong>
+                    </div>
+                    <button class="admin-button admin-button-outline" id="logoutButton" type="button">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        Sair
+                    </button>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <div class="dashboard-intro">
+                    <div>
+                        <span class="admin-kicker">Catálogo oficial</span>
+                        <h1>Gerenciar fornos</h1>
+                        <p>Altere valores, textos e a ordem dos modelos. As mudanças aparecem no site oficial após salvar.</p>
+                    </div>
+                    <div class="dashboard-actions">
+                        <a class="admin-button admin-button-outline" href="../index.html#aluguel" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            Ver catálogo
+                        </a>
+                        <button class="admin-button admin-button-primary" id="seedButton" type="button">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            Cadastrar modelos iniciais
+                        </button>
+                    </div>
+                </div>
+
+                <div class="status-message dashboard-status" id="dashboardStatus" hidden></div>
+
+                <div class="summary-grid">
+                    <article>
+                        <i class="fa-solid fa-fire-burner"></i>
+                        <div><strong id="totalOvens">0</strong><span>Modelos cadastrados</span></div>
+                    </article>
+                    <article>
+                        <i class="fa-solid fa-eye"></i>
+                        <div><strong id="activeOvens">0</strong><span>Visíveis no site</span></div>
+                    </article>
+                    <article>
+                        <i class="fa-solid fa-clock"></i>
+                        <div><strong>24h</strong><span>Período de aluguel</span></div>
+                    </article>
+                </div>
+
+                <div class="editor-list" id="ovenEditorList">
+                    <div class="admin-loading">
+                        <i class="fa-solid fa-circle-notch fa-spin"></i>
+                        Carregando modelos...
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="admin.js"></script>
+</body>
+</html>
