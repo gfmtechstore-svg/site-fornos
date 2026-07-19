@@ -1,0 +1,24 @@
+CAMP FORNOS DO BRASIL - NOVA HOME
+
+Arquivos principais:
+- index.html
+- style.css/style.css
+- script.js/script.js
+
+Novos arquivos:
+- img/logo-site.png
+- img/forno1.webp
+- img/forno2.webp
+- img/forno3.webp
+- robots.txt
+- sitemap.xml
+
+Para publicar no site oficial pelo terminal do VS Code:
+
+git add .
+git commit -m "Nova home premium Camp Fornos"
+git pull --rebase origin main
+git push
+
+Site oficial:
+https://www.campfornos.com.br
